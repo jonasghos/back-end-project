@@ -3,7 +3,9 @@
 	<groupId>ar.com.codoacodo</groupId>
 	<artifactId>webapp</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<description>Proyecto web java - Codo a Codo</description>
+
 
 	<!-- Add java version-->
 	<properties>
@@ -11,11 +13,35 @@
 		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	<dependencies>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.31</version>
 		</dependency>
+		<!-- Habilito la posibilidad de usar Serverlet y JSP -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.3</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
+	<!-- Contexto -->
+	<build>
+		<plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-war-plugin</artifactId>
+	            <version>3.3.1</version>
+	        </plugin>
+    </plugins>
+		<finalName>app-web</finalName>	
+	</build>
 </project>

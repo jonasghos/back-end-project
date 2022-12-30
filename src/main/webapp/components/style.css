@@ -1,0 +1,32 @@
+@charset "ISO-8859-1";
+
+/*initial config.*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg{
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/ba1.jpg);
+
+
+}
+
+.table {
+	width: 80%;
+}
+
+main{
+	height: 100vh;
+}
+.btn-list {
+	height: 30px;
+	width: 	30px;
+}
+.main-home{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
